@@ -11,7 +11,7 @@ elem.send_keys(Keys.RETURN)
 
 elem = driver.find_element_by_name("pass")
 elem.clear()
-elem.send_keys("pnc12102015")
+elem.send_keys("")
 elem.send_keys(Keys.RETURN)
 elem.clear()
 
