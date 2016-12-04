@@ -14,4 +14,12 @@ This could have required no use of Selenium, and could have been done by using F
 - [ ]  Convert above into an extension or a web-app
 - [ ]  Launch it as an .exe file for windows
 
+##Contribution guidelines :
+
+* Push to master if your language is python and the browser is firefox.
+* Push to chrome if your language is python and the browser is chrome.
+* Push to java if your language is java and the browser is firefox.
+
+Never push from master. Try creating a new branch on your local and push from the said branch.
+
 Any suggestions or contributions are welcome!
