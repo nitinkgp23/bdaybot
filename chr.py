@@ -9,7 +9,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 
 
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 driver.get("http://www.facebook.com")
 assert "Facebook" in driver.title
 elem = driver.find_element_by_name("email")
@@ -33,7 +33,7 @@ except TimeoutException:
 def post_checker(post):
     hpylst = ['happy','hapy','hapi','appy','hpy']
     bdylst = ['birthday','bday','budday','b\'day','bdy']
-    return any(word in post for word in hpylst) and any(word in post for word in bdylst)
+    return any(word in post for word in hpylst) and (any(word in post for word in bdylst) or ('return' in post and 'day' in post))
 posts=[]
 try:
     elem=WebDriverWait(driver,delay).until(EC.presence_of_element_located((By.CLASS_NAME,"_44b2")))
@@ -53,4 +53,6 @@ try:
     print "Successfully liked relevant posts"
 except TimeoutException:
     print "Timeout" 
-        
+
+app_secret = 'a508a47755cb78460fde5c52c9b9230f'
+app_id = '1178068725594212'
