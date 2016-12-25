@@ -21,7 +21,7 @@ elem.clear()
 elem.send_keys("botbday56"+Keys.RETURN)
 print("Please Enter Your Username and Password there and\n press the login button...... (30 sec wait time) ")
 elem.send_keys(Keys.RETURN)'''
-time.sleep(20)
+time.sleep(2)
 delay = 60
 
 try:
