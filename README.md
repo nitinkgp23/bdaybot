@@ -25,5 +25,5 @@ Any suggestions or contributions are welcome!
 
 ##Language:
 
-* JAVA
-* Python3
+* JAVA ( Class can be found in folder bdaybot ).
+* Python3 ( firefox.py is in Python 3 ). 
