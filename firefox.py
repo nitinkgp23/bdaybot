@@ -1,28 +1,35 @@
 from selenium import webdriver
 import time
+import random
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoSuchElementException   
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import ElementNotVisibleException
 
-print("Welcome! Kindly fill the \nrequired fields for login when it loads\nand press the login button")
+#print("Welcome! Kindly fill the \nrequired fields for login when it loads\nand press the login button")
+print("opening site.....")
 
 driver = webdriver.Firefox()
 driver.get("http://www.facebook.com")
 assert "Facebook" in driver.title
-'''time.sleep(5)
+time.sleep(5)
 elem = driver.find_element_by_name("email")
 elem.clear()
 elem.send_keys("botbday@gmail.com")
 elem = driver.find_element_by_name("pass")
 elem.clear()
 elem.send_keys("botbday56"+Keys.RETURN)
-print("Please Enter Your Username and Password there and\n press the login button...... (30 sec wait time) ")
-elem.send_keys(Keys.RETURN)'''
+#print("Please Enter Your Username and Password there and\n press the login button...... (30 sec wait time) ")
+elem.send_keys(Keys.RETURN)
 time.sleep(2)
 delay = 60
+
+comment_list=["Thank You So much!......","Thanks","Thank u","Thnx buddy"]
+nc=len(comment_list)
+
 
 try:
     elem=WebDriverWait(driver,delay).until(EC.presence_of_element_located((By.CLASS_NAME,"_2s25")))
@@ -80,9 +87,10 @@ try:
     print("Total ",len(posts)," element in posts....")
     for post in posts:
         count+=1
+        comment=comment_list[random.randrange(0,nc)]
         #post.click()
         driver.execute_script("return arguments[0].scrollIntoView();", post)
-        driver.execute_script("window.scrollBy(0, -30);")
+        driver.execute_script("window.scrollBy(0, -45);")
         print("count=",count,"\n")
         try:
          post_text=post.find_element_by_xpath(".//div[@class='_5pbx userContent']").text.lower()
@@ -95,30 +103,52 @@ try:
                  p=post.find_element_by_xpath(".//a[@class='UFILikeLink _4x9- _4x9_ _48-k']")
                  attr=p.get_attribute("aria-pressed")
                  print("attr=",attr)
+                 
                  if(attr=="false"):
+                     
                   try:   
                    sect=post.find_element_by_class_name("UFICommentContainer")
-                   #print("Sect found!")
+                   time.sleep(2)
+                   print("Sect found!")
                   except NoSuchElementException:
                    print(" NoSuchElementException Thrown while searching UFIcomeent Container")
                   try: 
                    p=sect.find_element_by_class_name("UFIInputContainer")
-                   sect.find_element_by_class_name("UFIInputContainer").click()
+                   p.click()
+
+                   '''try:
+                    p.find_element_by_class_name("_1osa mentionsHidden").click()
+                   except NoSuchElementException:
+                    print(" NoSuchElementException Thrown while searching _1osa mentionsHidden")'''   
+                   print("clicked on UFIInput container")
                    
                   except NoSuchElementException:
                    print(" NoSuchElementException Thrown while searching UFIInput Container")
-                  
-                  
-                  time.sleep(4)
+                
+                   
                   try:
                    comm=p.find_element_by_class_name("_5rpb")
-                   comm.click()
-                   #print("_5rpb found.....")
-                   comm.send_keys("Thank You!! So much...."+Keys.RETURN)
-                   print("1 comment done\n")
+                   #comm=WebDriverWait(driver,10).until(p.find_element_by_class_name("_5rpb"))
+                   
                     
                   except NoSuchElementException:
-                   print(" NoSuchElementException Thrown while searching _5rpb")   
+                   print(" NoSuchElementException Thrown while searching _5rpb")
+                  except ElementNotVisibleException:
+                   print(" ElementNotVisibleException Thrown while searching _5rpb")
+                  except InvalidElementStateException:
+                   print(" InvalidElementStateException Thrown while searching _5rpb")
+                  except MoveTargetOutOfBoundsException:
+                   print(" MoveTargetOutOfBoundsException Thrown while searching _5rpb")
+                  except StaleElementReferenceException:
+                   print(" StaleElementReferenceException Thrown while searching _5rpb") 
+
+                  else:
+                   print("No exception raised")   
+                   comm.click()
+                   print("_5rpb found.....")
+                   comm.send_keys(comment+Keys.RETURN)
+                   print("1 comment done\n")   
+                   
                   post.find_element_by_xpath(".//a[@class='UFILikeLink _4x9- _4x9_ _48-k']").click()
                   print("1 like done.... ")
                   no_of_postliked+=1
