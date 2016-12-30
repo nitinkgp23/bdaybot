@@ -27,7 +27,7 @@ elem.send_keys(Keys.RETURN)
 time.sleep(2)
 delay = 60
 
-comment_list=["Thank You So much!......","Thanks","Thank u","Thnx buddy"]
+comment_list=["Thank You So much!......","Thanks","Thank u","Thnx buddy","Thank you!!...."]
 nc=len(comment_list)
 
 
@@ -96,7 +96,7 @@ try:
          post_text=post.find_element_by_xpath(".//div[@class='_5pbx userContent']").text.lower()
         except NoSuchElementException:
          continue   
-        time.sleep(3)
+        #time.sleep(3)
         if post_checker(post_text):
             try:
                  print("Current post text= ",post_text)
@@ -108,7 +108,7 @@ try:
                      
                   try:   
                    sect=post.find_element_by_class_name("UFICommentContainer")
-                   time.sleep(2)
+                   #time.sleep(2)
                    print("Sect found!")
                   except NoSuchElementException:
                    print(" NoSuchElementException Thrown while searching UFIcomeent Container")
