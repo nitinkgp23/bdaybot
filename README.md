@@ -32,8 +32,7 @@ Any suggestions or contributions are welcome!
 
 firefox.py is the only updated file here, that can successfully do the required job.
 Do 
-``` git clone 
+`   git clone
     cd bdaybot
-    python3 firefox.py
-    ```
+    python3 firefox.py`
 You need to install `selenium` package first. Download the latest `geckodriver` and place it in PATH.
