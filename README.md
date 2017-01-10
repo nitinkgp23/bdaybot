@@ -27,3 +27,13 @@ Any suggestions or contributions are welcome!
 
 * JAVA ( Class can be found in folder bdaybot ).
 * Python3 ( firefox.py is in Python 3 ). 
+
+##How to
+
+firefox.py is the only updated file here, that can successfully do the required job.
+Do 
+``` git clone 
+    cd bdaybot
+    python3 firefox.py
+    ```
+You need to install `selenium` package first. Download the latest `geckodriver` and place it in PATH.
