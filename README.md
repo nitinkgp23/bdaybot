@@ -15,6 +15,13 @@ This could have required no use of Selenium, and could have been done by using F
 - [ ]  Convert above into an extension or a web-app
 - [ ]  Launch it as an .exe file for windows
 
+##Dependencies :
+
+Install all the dependencies using `pip install -r requirements.txt` before using the script.
+
+##Usage :
+
+
 ##Contribution guidelines :
 
 * Push to master.
