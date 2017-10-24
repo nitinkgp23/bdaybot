@@ -14,3 +14,11 @@ Thank you everyone below for your contributions **(No matter how big or small)!*
 
 | Name | Email | Twitter |
 | ---- | ----- | ------- |
+| [Rahul Kumar](https://github.com/vernwalrahul) | [vernwalrahul@iitkgp.ac.in](mailto:vernwalrahul@iitkgp.ac.in) | -------
+| [Aditya Singh](https://github.com/adityagit11) | ----- | -------
+| [Himanshu](https://github.com/himanshukgp) | [hs80941@gmail.com](mailto:hs80941@gmail.com) | -------
+| [Arsalan Saad](https://github.com/arsalansaad) | ----- | -------
+| [Ritesh Prasad](https://github.com/ritesh-nitjsr) | [ritesh.nitjsr01@gmail.com](mailto:ritesh.nitjsr01@gmail.com) | -------
+| [Vinayak](https://github.com/vinayakvivek) | [vinayakdeepu@gmail.com](mailto:vinayakdeepu@gmail.com) | -------
+| [The Gitter Badger](https://github.com/gitter-badger) | [badger@gitter.im](mailto:badger@gitter.im) | -------
+| [Alexander Malmström](https://github.com/AlexanderMalmstrom) | [jag@alexandermalmstrom.se](mailto:jag@alexandermalmstrom.se) | [@AlexMalmstrom](https://twitter.com/AlexMalmstrom)
