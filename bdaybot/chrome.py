@@ -25,9 +25,9 @@ try:
     elem=WebDriverWait(driver,delay).until(EC.presence_of_element_located((By.CLASS_NAME,"_2s25")))
     time.sleep(5);
     elem.click();
-    print "Successfully Logged in";
+    print ("Successfully Logged in")
 except TimeoutException:
-    print "Timeout or wrong email/password" ;
+    print ("Timeout or wrong email/password")
     driver.close();
 
 def post_checker(post):
@@ -50,9 +50,9 @@ try:
                 post.find_element_by_xpath(".//a[@class='UFILikeLink _4x9- _4x9_ _48-k']").click()
             except:
                 continue
-    print "Successfully liked relevant posts"
+    print ("Successfully liked relevant posts")
 except TimeoutException:
-    print "Timeout" 
+    print ("Timeout") 
 
 app_secret = 'a508a47755cb78460fde5c52c9b9230f'
 app_id = '1178068725594212'
