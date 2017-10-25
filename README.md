@@ -10,7 +10,7 @@ This could have required no use of Selenium, and could have been done by using F
 ## TODO:
 
 - [x]  Automate facebook login
-- [ ]  Locate Bdday posts from the user's wall, iterate over them, like and comment.
+- [x]  Locate Bdday posts from the user's wall, iterate over them, like and comment.
 - [ ]  Take the username and password during the process.
 - [ ]  Convert above into an extension or a web-app
 - [ ]  Launch it as an .exe file for windows
