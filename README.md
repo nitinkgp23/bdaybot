@@ -7,7 +7,7 @@ It uses Selenium to automate facebook login and successively locating the birthd
 ***
 This could have required no use of Selenium, and could have been done by using Facebook's Graph API, but only till the previous version. In the current version, API doesnt give access to the bdday posts individually. Instead, it groups all the 150 posts, say, and makes it a 1 story, with one story-id. There are no indvidual post-ids to access them.
 
-##TODO :
+## TODO:
 
 - [x]  Automate facebook login
 - [ ]  Locate Bdday posts from the user's wall, iterate over them, like and comment.
@@ -15,14 +15,14 @@ This could have required no use of Selenium, and could have been done by using F
 - [ ]  Convert above into an extension or a web-app
 - [ ]  Launch it as an .exe file for windows
 
-##Dependencies :
+## Dependencies:
 
 Install all the dependencies using `pip install -r requirements.txt` before using the script.
 
-##Usage :
+## Usage:
 
 
-##Contribution guidelines :
+## Contribution guidelines:
 
 * Push to master.
 
@@ -30,12 +30,12 @@ Never push from master. Try creating a new branch on your local and push from th
 
 Any suggestions or contributions are welcome!
 
-##Language:
+## Language:
 
 * JAVA ( Class can be found in folder bdaybot ).
 * Python3 ( firefox.py is in Python 3 ). 
 
-##How to
+## How to
 
 firefox.py is the only updated file here, that can successfully do the required job.
 Do 
